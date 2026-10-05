@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- ================================================================ -->
+    <!-- Soft Nexis - Task 3: HikariCP Connection Pool JNDI Resource      -->
+    <!-- ================================================================ -->
+    <Resource name="jdbc/ContactDB"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="com.zaxxer.hikari.HikariJNDIFactory"
+              jdbcUrl="jdbc:postgresql://localhost:5432/contactdb"
+              username="admin"
+              password="secret"
+              maximumPoolSize="20"
+              connectionTimeout="30000"
+              connectionTestQuery="SELECT 1"/>
+</Context>
